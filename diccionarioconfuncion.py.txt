@@ -1,0 +1,86 @@
+coders = {
+    "1": {"id": 1025436, "nombre": "jonathan", "apellido": "escorcia", "lvl_english": "A-1", "edad": 20},
+    "2": {"id": 1022563, "nombre": "zero", "apellido": "night", "lvl_english": "A-2", "edad": 24},
+    "3": {"id": 1236445, "nombre": "solomon", "apellido": "kane", "lvl_english": "B-2", "edad": 29},
+    "4": {"id": 1356459, "nombre": "cid", "apellido": "de la luz", "lvl_english": "C-1", "edad": 25}
+}
+
+# -------- FUNCIONES --------
+
+def leer_entero(mensaje):
+    while True:
+        try:
+            return int(input(mensaje))
+        except ValueError:
+            print("Error: Debes ingresar un número válido.")
+
+def agregar_coder():
+    id = leer_entero("Digite su número de ID: ")
+    nombre = input("Digite un nombre: ")
+    apellido = input("Digite un apellido: ")
+    edad = leer_entero("Digite su edad: ")
+    ingles = input("Digite su nivel de inglés: ")
+
+    nueva_clave = str(len(coders) + 1)
+    coders[nueva_clave] = {
+        "id": id,
+        "nombre": nombre,
+        "apellido": apellido,
+        "edad": edad,
+        "lvl_english": ingles
+    }
+
+    print("Coder agregado correctamente\n")
+
+def eliminar_coder():
+    numero = input("Digite el número del coder a eliminar: ")
+
+    if numero in coders:
+        nombre = coders[numero]["nombre"]
+        del coders[numero]
+        print("Eliminaste a", nombre)
+    else:
+        print("Ese coder no existe")
+
+def ver_coder():
+    busqueda = leer_entero("Digite el ID del coder que desea buscar: ")
+    coder_encontrado = None
+
+    for datos in coders.values():
+        if datos["id"] == busqueda:
+            coder_encontrado = datos
+
+    if coder_encontrado:
+        print(coder_encontrado)
+    else:
+        print("Coder no encontrado")
+
+def menu():
+    print("\n1. Agregar coder")
+    print("2. Eliminar coder")
+    print("3. Ver datos de coder")
+    print("4. Salir")
+
+# -------- PROGRAMA PRINCIPAL --------
+
+def main():
+    activo = True
+
+    while activo:
+        menu()
+        opcion = leer_entero("Digite una opción (1-4): ")
+
+        if opcion == 1:
+            agregar_coder()
+        elif opcion == 2:
+            eliminar_coder()
+        elif opcion == 3:
+            ver_coder()
+        elif opcion == 4:
+            print("Gracias por usar el sistema")
+            activo = False
+        else:
+            print("Opción inválida")
+
+# Ejecutar programa
+main()
