@@ -1,0 +1,213 @@
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$  git status
+fatal: no es un repositorio git (ni ninguno de los directorios superiores): .git
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git init
+Inicializado repositorio Git vacío en /home/cohorte5/Documentos/landing/page/.git/
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git status
+En la rama main
+
+No hay commits todavía
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+	README.md
+	audio/
+	formulario.html
+	img/
+	index.html
+	present.html
+	principal.js
+	prueba.txt
+	script3.js
+	secundaria.js
+	style.css
+	style2.css
+	style3.css
+	video/
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git config user.email "jonathanstevenescorciasalgado@gmail.com"
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git remote add origin  https://github.com/Light-moonx4/shadow
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git commit -m "proyecto"
+[main (commit-raíz) 1bd78aa] proyecto
+ 47 files changed, 1691 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 audio/kirby.mpeg
+ create mode 100644 formulario.html
+ create mode 100644 img/Gardevoir.png
+ create mode 100644 img/Sett.png
+ create mode 100644 img/Super-Smash-Bros-Logo.png
+ create mode 100644 img/biblo1.png
+ create mode 100644 img/biblo10.png
+ create mode 100644 img/biblo11.png
+ create mode 100644 img/biblo2.png
+ create mode 100644 img/biblo3.png
+ create mode 100644 img/biblo4.png
+ create mode 100644 img/biblo5.png
+ create mode 100644 img/biblo6.png
+ create mode 100644 img/biblo7.png
+ create mode 100644 img/biblo8.png
+ create mode 100644 img/biblo9.png
+ create mode 100644 img/fondo.png
+ create mode 100644 img/fondo2.png
+ create mode 100644 img/kirby.png
+ create mode 100644 img/link.png
+ create mode 100644 img/link2.png
+ create mode 100644 img/link3.png
+ create mode 100644 img/logo.png
+ create mode 100644 img/logo2.png
+ create mode 100644 img/mario.png
+ create mode 100644 img/mario2.png
+ create mode 100644 img/mario3.png
+ create mode 100644 img/pikachu.png
+ create mode 100644 img/pikachu2.png
+ create mode 100644 img/pikachu3.png
+ create mode 100644 img/samus.png
+ create mode 100644 img/samus2.png
+ create mode 100644 img/samus3.png
+ create mode 100644 img/zelda.png
+ create mode 100644 img/zelda2.png
+ create mode 100644 img/zelda3.png
+ create mode 100644 index.html
+ create mode 100644 present.html
+ create mode 100644 principal.js
+ create mode 100644 prueba.txt
+ create mode 100644 script3.js
+ create mode 100644 secundaria.js
+ create mode 100644 style.css
+ create mode 100644 style2.css
+ create mode 100644 style3.css
+ create mode 100644 video/Super Smash Bros. Ultimate - Intro With All DLC.mp4
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git push origin main
+Username for 'https://github.com': Light-moonx4
+Password for 'https://Light-moonx4@github.com': 
+To https://github.com/Light-moonx4/shadow
+ ! [rejected]        main -> main (fetch first)
+error: falló el empuje de algunas referencias a 'https://github.com/Light-moonx4/shadow'
+ayuda: Updates were rejected because the remote contains work that you do not
+ayuda: have locally. This is usually caused by another repository pushing to
+ayuda: the same ref. If you want to integrate the remote changes, use
+ayuda: 'git pull' before pushing again.
+ayuda: See the 'Note about fast-forwards' in 'git push --help' for details.
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Desempaquetando objetos: 100% (3/3), 872 bytes | 872.00 KiB/s, listo.
+Desde https://github.com/Light-moonx4/shadow
+ * branch            main       -> FETCH_HEAD
+ * [nueva rama]      main       -> origin/main
+ayuda: Las ramas se han divergido y hay que especificar cómo reconciliarlas.
+ayuda: Se puede hacerlo ejecutando uno de los comandos siguiente antes del
+ayuda: próximo pull:
+ayuda: 
+ayuda:   git config pull.rebase false  # fusionar
+ayuda:   git config pull.rebase true   # rebasar
+ayuda:   git config pull.ff only       # solo avance rápido
+ayuda: 
+ayuda: Se puede reemplazar "git config" con "git config --global" para aplicar
+ayuda: la preferencia en todos los repositorios. También se puede pasar
+ayuda: --rebase, --no-rebase o --ff-only en el comando para sobrescribir la
+ayuda: configuración por defecto en cada invocación.
+fatal: Necesita especificar cómo reconciliar las ramas divergentes.
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git config pull.rebase true
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git pull origin main
+Desde https://github.com/Light-moonx4/shadow
+ * branch            main       -> FETCH_HEAD
+Auto-fusionando README.md
+CONFLICTO (agregar/agregar): Conflicto de fusión en README.md
+error: no se pudo aplicar 1bd78aa... proyecto
+ayuda: Resolve all conflicts manually, mark them as resolved with
+ayuda: "git add/rm <conflicted_files>", then run "git rebase --continue".
+ayuda: You can instead skip this commit: run "git rebase --skip".
+ayuda: To abort and get back to the state before "git rebase", run "git rebase --abort".
+No se pudo aplicar 1bd78aa... proyecto
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git add .
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git pull origin main
+error: no se puede pull con rebase: Tu índice contiene cambios que no están en un commit.
+error: Por favor, confírmalos o guárdalos.
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git commit -m "proyecto"
+[HEAD desacoplado 3e11add] proyecto
+ 47 files changed, 1694 insertions(+)
+ create mode 100644 audio/kirby.mpeg
+ create mode 100644 formulario.html
+ create mode 100644 img/Gardevoir.png
+ create mode 100644 img/Sett.png
+ create mode 100644 img/Super-Smash-Bros-Logo.png
+ create mode 100644 img/biblo1.png
+ create mode 100644 img/biblo10.png
+ create mode 100644 img/biblo11.png
+ create mode 100644 img/biblo2.png
+ create mode 100644 img/biblo3.png
+ create mode 100644 img/biblo4.png
+ create mode 100644 img/biblo5.png
+ create mode 100644 img/biblo6.png
+ create mode 100644 img/biblo7.png
+ create mode 100644 img/biblo8.png
+ create mode 100644 img/biblo9.png
+ create mode 100644 img/fondo.png
+ create mode 100644 img/fondo2.png
+ create mode 100644 img/kirby.png
+ create mode 100644 img/link.png
+ create mode 100644 img/link2.png
+ create mode 100644 img/link3.png
+ create mode 100644 img/logo.png
+ create mode 100644 img/logo2.png
+ create mode 100644 img/mario.png
+ create mode 100644 img/mario2.png
+ create mode 100644 img/mario3.png
+ create mode 100644 img/pikachu.png
+ create mode 100644 img/pikachu2.png
+ create mode 100644 img/pikachu3.png
+ create mode 100644 img/samus.png
+ create mode 100644 img/samus2.png
+ create mode 100644 img/samus3.png
+ create mode 100644 img/zelda.png
+ create mode 100644 img/zelda2.png
+ create mode 100644 img/zelda3.png
+ create mode 100644 index.html
+ create mode 100644 present.html
+ create mode 100644 principal.js
+ create mode 100644 prueba.txt
+ create mode 100644 script3.js
+ create mode 100644 secundaria.js
+ create mode 100644 style.css
+ create mode 100644 style2.css
+ create mode 100644 style3.css
+ create mode 100644 video/Super Smash Bros. Ultimate - Intro With All DLC.mp4
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git pull origin main
+Desde https://github.com/Light-moonx4/shadow
+ * branch            main       -> FETCH_HEAD
+fatal: Parece que ya hay un directorio rebase-merge, y
+me pregunto si estás en medio de otro rebase. Si ese es el
+caso, por favor intenta
+	git rebase (--continue | --abort | --skip)
+Si no es el caso, por favor
+	rm -fr ".git/rebase-merge"
+y ejecútame nuevamente. Me estoy deteniendo en caso de que tengas
+algo de valor ahí.
+
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git rebase --continue
+Rebase aplicado satisfactoriamente y actualizado refs/heads/main.
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git pull origin main
+Desde https://github.com/Light-moonx4/shadow
+ * branch            main       -> FETCH_HEAD
+La rama actual main está actualizada.
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ git push origin main
+Username for 'https://github.com': Light-moonx4 
+Password for 'https://Light-moonx4@github.com': 
+Enumerando objetos: 54, listo.
+Contando objetos: 100% (54/54), listo.
+Compresión delta usando hasta 12 hilos
+Comprimiendo objetos: 100% (51/51), listo.
+Escribiendo objetos: 100% (52/52), 87.85 MiB | 9.16 MiB/s, listo.
+Total 52 (delta 2), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (2/2), done.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File video/Super Smash Bros. Ultimate - Intro With All DLC.mp4 is 51.79 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/Light-moonx4/shadow
+   9cf8105..3e11add  main -> main
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ ^C
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ ^C
+cohorte5@rwadmin-H610M-HDV-M-2-R2-0:~/Documentos/landing/page$ 
+
